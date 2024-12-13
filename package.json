@@ -2,7 +2,15 @@
   "name": "testpaperturn",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "e2e_chromium_Test": "npx playwright test  tests/ PaperTurn_HomePage.spec.js --project=chromium --headed",
+    "e2e_firefox_Test": "npx playwright test  tests/ PaperTurn_LoginPage.spec.js --project=chromium --headed",
+    "e2e_Mobile_Test": "npx playwright test  tests/ PaperTurn_Dashboard.spec.js  --project=chromium --headed",
+
+    "e2e_chromium_Test": "npx playwright test tests/ --project=chromium --headed",
+    "e2e_firefox_Test": "npx playwright test tests/ --project=firefox --headed",
+    "e2e_Mobile_Test": "npx playwright test tests/ --project=MobileChrome --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
